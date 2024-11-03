@@ -1,42 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-    Account bank1 =new Account();
+        Employee employee1 = new Employee();
 
-    bank1.setName("arwa");
-    bank1.setId("1132673416");
-    bank1.setBalance(500);
-        System.out.println(bank1.getName());
-        System.out.println(bank1.getId());
-        System.out.println(bank1.getBalance());
-
-        System.out.println(bank1);
-        bank1.credit(200);
-        bank1.debit(100);
-
-        System.out.println(bank1);
-        System.out.println("---------------------------------------------------------");
-        Account bank2 =new Account();
-
-        bank2.setName("rose");
-        bank2.setId("88729027");
-        bank2.setBalance(500);
-        System.out.println(bank2.getName());
-        System.out.println(bank2.getId());
-        System.out.println(bank2.getBalance());
-        System.out.println(bank2);
-
-        bank2.debit(200);
-        bank2.credit(1000);
-
-        System.out.println(bank2);
-
-        System.out.println("---------------------------------------------------------");
-        bank1.transferTo(bank2,200);
-        System.out.println(bank1);
-        System.out.println(bank2);
+        employee1.setName("arwa");
+        employee1.setId("8848893");
+        employee1.setSalary(20000);
+        System.out.println(employee1);
+        System.out.println();
 
 
+        System.out.println(employee1.toString());
 
+        System.out.println("Annual Salary: " + employee1.getAnnualSalary());
+
+        int newSalary = employee1.raisedSalary(10);
+        System.out.println("New Salary after 10% raise: " + newSalary);
+    }
 
     }
-}
